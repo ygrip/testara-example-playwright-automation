@@ -1,0 +1,17 @@
+{
+  "enabled": true,
+  "match": {
+    "method": "GET",
+    "urlContains": "avatars.githubusercontent.com",
+    "responseContentType": "image/"
+  },
+  "action": {
+    "modifyResponse": {
+      "statusCode": 200,
+      "headers": {
+        "set": { "Content-Type": "image/png" }
+      }
+    }
+  },
+  "responseBodyFile": "github/images/replacement-avatar.png"
+}
